@@ -103,7 +103,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 28px 24px 60px; outline: none
 :root[data-theme="dark"] #themeToggle .sun { display: block; }
 :root[data-theme="dark"] #themeToggle .moon { display: none; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #themeToggle .sun { display: block; } :root:not([data-theme="light"]) #themeToggle .moon { display: none; } }
-@media (max-width: 1320px) {
+@media (max-width: 860px) {
   .menu-btn { display: inline-flex; }
   .nav { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; padding: 10px 16px 16px; background: var(--surface); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-lg); display: none; }
   .nav.open { display: flex; }
@@ -766,3 +766,13 @@ td.mono { font-family: var(--mono); }
 
 .brand, .top-actions { flex-shrink: 0; }
 .topbar-inner { gap: 14px; }
+
+/* Header tiers: shrink the chrome before ever hiding the nav links */
+@media (max-width: 1260px) and (min-width: 861px) {
+  .brand-t, .kbd, .progress-badge { display: none; }
+  .brand { gap: 0; }
+}
+@media (max-width: 950px) and (min-width: 861px) {
+  .nav a { padding: 6px 7px; font-size: 0.85rem; }
+  .topbar-inner { padding: 10px 16px; gap: 10px; }
+}
