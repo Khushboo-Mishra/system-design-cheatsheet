@@ -90,7 +90,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 28px 24px 60px; outline: none
 .brand-mark { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 4px 14px -4px var(--accent); }
 .brand-t b { font-weight: 800; }
 .nav { display: flex; gap: 2px; margin-left: auto; }
-.nav a { color: var(--text-2); padding: 7px 11px; border-radius: 9px; font-weight: 500; font-size: 0.92rem; }
+.nav a { color: var(--text-2); padding: 7px 10px; border-radius: 9px; font-weight: 500; font-size: 0.9rem; white-space: nowrap; flex-shrink: 0; }
 .nav a:hover { background: var(--surface-2); text-decoration: none; color: var(--text); }
 .nav a.active { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
 .top-actions { display: flex; align-items: center; gap: 6px; }
@@ -103,7 +103,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 28px 24px 60px; outline: none
 :root[data-theme="dark"] #themeToggle .sun { display: block; }
 :root[data-theme="dark"] #themeToggle .moon { display: none; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #themeToggle .sun { display: block; } :root:not([data-theme="light"]) #themeToggle .moon { display: none; } }
-@media (max-width: 1200px) {
+@media (max-width: 1320px) {
   .menu-btn { display: inline-flex; }
   .nav { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; padding: 10px 16px 16px; background: var(--surface); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-lg); display: none; }
   .nav.open { display: flex; }
@@ -763,3 +763,6 @@ details.chap[open] summary { border-bottom: 1px solid var(--border); background:
 td.mono { font-family: var(--mono); }
 .page-head .tabs { margin: 14px 0 12px; }
 .mchip { white-space: normal; max-width: 100%; text-align: left; }
+
+.brand, .top-actions { flex-shrink: 0; }
+.topbar-inner { gap: 14px; }
